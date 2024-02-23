@@ -21,9 +21,9 @@ ecco gli esercizi da svolgere con una checkbox di fiaco
 
 - [ ]  07 Implementa una coda: Scrivi una classe JavaScript che implementi una coda (FIFO - First In, First Out) con i metodi enqueue (aggiunge un elemento alla fine della coda), dequeue (rimuove e restituisce l'elemento dalla testa della coda) e isEmpty (verifica se la coda è vuota).
 
-- [ ]  08 Valida un indirizzo email: Scrivi uno script che validi se una stringa rappresenta un indirizzo email valido secondo i criteri standard.
+- [X]  08 Valida un indirizzo email: Scrivi uno script che validi se una stringa rappresenta un indirizzo email valido secondo i criteri standard.
 
-- [ ]  09 Calcola la somma di tutti i numeri dispari in un intervallo: Scrivi uno script che calcoli la somma di tutti i numeri dispari in un intervallo specificato da due numeri interi positivi.
+- [X]  09 Calcola la somma di tutti i numeri dispari in un intervallo: Scrivi uno script che calcoli la somma di tutti i numeri dispari in un intervallo specificato da due numeri interi positivi.
 
 - [ ]  10 Implementa una funzione di memoizzazione: Scrivi una funzione JavaScript che accetti un'altra funzione come argomento e restituisca una versione "memoizzata" di essa, cioè una versione che memorizza i risultati delle chiamate precedenti per evitare di ricalcolarli quando viene chiamata con gli stessi argomenti.
 ...
