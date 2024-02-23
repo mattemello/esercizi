@@ -5,7 +5,7 @@
 > [!TIP]
 > continua a programmare ogni giorno.
 
-ecco gli esercizi da svolgere con una checkbox di fiaco
+ecco gli esercizi da svolgere con una checkbox di fianco
 ...
 - [X]  01 Calcola il fattoriale di un numero: Scrivi uno script che calcoli il fattoriale di un numero. Il fattoriale di un numero intero positivo n, indicato con n!, è il prodotto di tutti i numeri    interi positivi da 1 a n.
 
