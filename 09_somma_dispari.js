@@ -8,11 +8,9 @@ function somma_dispari(prn, sen) {
         prn = sen;
         sen = app;
     }
-
     if (prn % 2 == 0) {
         prn += 1;
     }
-
     if (sen % 2 == 0) {
         sen -= 1
     }
