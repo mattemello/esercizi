@@ -4,26 +4,34 @@
  * dequeue (rimuove e restituisce l'elemento dalla testa della coda) 
  * e isEmpty (verifica se la coda è vuota). */
 
-coda = {
-    next: null,
-    valore,
-    enqueue: function(val) {
-        this.valore = val;
-        next = this.next;
-    },
+class Queue {
 
-    dequeue: function() {
-        this.next = null;
+    constructor() {
+        this.valore = new Array;
+        this.primo = 0;
+        this.ultimo = -1;
+        this.numero_el =  0;
+    }
 
-        return this.valore;
-    },
+    enqueue(val) {
+        this.valore[this.numero_el] = val;
+        this.numero_el += 1;
+    }
 
-    isEmpty: function() {
-        if (this.next == null && this.val == undefined){
+    dequeue() {
+        let val = this.valore[this.primo];
+        this.numero_el -= 1;
+        for (let i = 0; i < this.numero_el; i++) {
+            this.valore[i] = this.valore[i+1];
+            
+        }
+        return val;
+    }
+
+    isEmpty() {
+        if (this.numero_el == 0){
             return true;
         }
         return false;
     }
 }
-
-
