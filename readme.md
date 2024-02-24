@@ -9,7 +9,7 @@ ecco gli esercizi da svolgere con una checkbox di fianco
 ...
 - [X]  01 Calcola il fattoriale di un numero: Scrivi uno script che calcoli il fattoriale di un numero. Il fattoriale di un numero intero positivo n, indicato con n!, è il prodotto di tutti i numeri    interi positivi da 1 a n.
 
-- [X]  02 Trova i numeri primi: Scrivi uno script che trovi e stampi tutti i numeri primi fino a un numero dato n.
+- []  02 Trova i numeri primi: Scrivi uno script che trovi e stampi tutti i numeri primi fino a un numero dato n.
 
 - [X]  03 Calcola l'MCD e l'MCM: Scrivi uno script che calcoli il massimo comune divisore (MCD) e il minimo comune multiplo (MCM) di due numeri interi positivi.
 
