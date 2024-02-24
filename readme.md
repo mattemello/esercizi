@@ -25,5 +25,5 @@ ecco gli esercizi da svolgere con una checkbox di fianco
 
 - [X]  09 Calcola la somma di tutti i numeri dispari in un intervallo: Scrivi uno script che calcoli la somma di tutti i numeri dispari in un intervallo specificato da due numeri interi positivi.
 
-- [ ]  10 Implementa una funzione di memoizzazione: Scrivi una funzione JavaScript che accetti un'altra funzione come argomento e restituisca una versione "memorizzata" di essa, cioè una versione che memorizza i risultati delle chiamate precedenti per evitare di ricalcolarli quando viene chiamata con gli stessi argomenti.
+- [X]  10 Implementa una funzione di memoizzazione: Scrivi una funzione JavaScript che accetti un'altra funzione come argomento e restituisca una versione "memorizzata" di essa, cioè una versione che memorizza i risultati delle chiamate precedenti per evitare di ricalcolarli quando viene chiamata con gli stessi argomenti.
 ...
