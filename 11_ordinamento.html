@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test ordinamento</title>
+</head>
+<body>
+    <script src="11_ordinamento_personalizzato.js"></script>
+    <div id="inserimento">
+        <p>inserire la stringa: </p>
+        <form name="form">
+            <input type="text" name="stringa">
+            <button type="button" onclick="aggiunta()">aggiungi la stringa</button>
+        </form>
+    </div>
+    <div>
+        <p id="stampa">niente</p>
+        <button type="submit" onclick="stamp()">stampa</button>
+        <br>
+        <br>
+        <form name="ord">
+            <select name="tipo" id="tip">
+                <option value="alfabetico">in ordine alfabetico (A-Z)</option>
+                <option value="inverso_al">in ordine alfabetico inverso (Z-A)</option>
+                <option value="numerico">della stringa piu' corta alla piu' lunga</option>
+                <option value="inverso_nu">della stringa piu' lunga alla piu' corta</option>
+            </select>
+            <br>
+            <button type="button" onclick="ordinamento()">ordina</button>
+        </form>
+    </div>
+    
+</body>
+</html>
