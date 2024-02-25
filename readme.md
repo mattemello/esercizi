@@ -31,19 +31,19 @@ ecco gli esercizi da svolgere con una checkbox di fianco
 
 - [ ] 12 Risolvi il problema del commesso viaggiatore: Implementa un algoritmo che risolva il problema del commesso viaggiatore, trovando il percorso più breve per visitare tutte le città una sola volta e tornare al punto di partenza.
 
-- [ ] Crea una struttura dati per un grafo: Implementa una struttura dati per rappresentare un grafo e aggiungi funzioni per aggiungere e rimuovere vertici e archi, nonché per eseguire operazioni come la ricerca del percorso più breve.
+- [ ] 13 Crea una struttura dati per un grafo: Implementa una struttura dati per rappresentare un grafo e aggiungi funzioni per aggiungere e rimuovere vertici e archi, nonché per eseguire operazioni come la ricerca del percorso più breve.
 
-- [ ] Implementa un algoritmo di machine learning da zero: Sperimenta implementando un semplice algoritmo di machine learning, come la regressione lineare o la classificazione con k-nearest neighbors, senza utilizzare librerie esterne.
+- [ ] 14 Implementa un algoritmo di machine learning da zero: Sperimenta implementando un semplice algoritmo di machine learning, come la regressione lineare o la classificazione con k-nearest neighbors, senza utilizzare librerie esterne.
 
-- [ ] Crea un'applicazione web usando solo HTML, CSS e JavaScript: Sviluppa un'applicazione web completa, ad esempio un gestore di attività o un'applicazione di gestione del budget, utilizzando solo HTML, CSS e JavaScript, senza l'uso di librerie o framework esterni.
+- [ ] 15 Crea un'applicazione web usando solo HTML, CSS e JavaScript: Sviluppa un'applicazione web completa, ad esempio un gestore di attività o un'applicazione di gestione del budget, utilizzando solo HTML, CSS e JavaScript, senza l'uso di librerie o framework esterni.
 
-- [ ] Crea un gioco usando un motore di gioco JavaScript come Phaser o Three.js: Sviluppa un gioco completo utilizzando un motore di gioco JavaScript come Phaser per giochi 2D o Three.js per giochi 3D.
+- [ ] 16 Crea un gioco usando un motore di gioco JavaScript come Phaser o Three.js: Sviluppa un gioco completo utilizzando un motore di gioco JavaScript come Phaser per giochi 2D o Three.js per giochi 3D.
 
-- [ ] Implementa un algoritmo di crittografia asimmetrica: Scrivi una funzione che generi una coppia di chiavi pubblica e privata e utilizzale per crittografare e decrittografare i messaggi.
+- [ ] 17 Implementa un algoritmo di crittografia asimmetrica: Scrivi una funzione che generi una coppia di chiavi pubblica e privata e utilizzale per crittografare e decrittografare i messaggi.
 
-- [ ] Crea un'applicazione full-stack utilizzando Node.js, Express e un database: Sviluppa un'applicazione web completa utilizzando Node.js per il backend, Express per gestire le richieste HTTP e un database come MongoDB o PostgreSQL per memorizzare i dati.
+- [ ] 18 Crea un'applicazione full-stack utilizzando Node.js, Express e un database: Sviluppa un'applicazione web completa utilizzando Node.js per il backend, Express per gestire le richieste HTTP e un database come MongoDB o PostgreSQL per memorizzare i dati.
 
-- [ ] Crea un'applicazione mobile utilizzando React Native o Flutter: Sviluppa un'applicazione mobile completa utilizzando React Native per sviluppare un'applicazione per Android e iOS o Flutter per creare un'applicazione multi-piattaforma.
+- [ ] 19 Crea un'applicazione mobile utilizzando React Native o Flutter: Sviluppa un'applicazione mobile completa utilizzando React Native per sviluppare un'applicazione per Android e iOS o Flutter per creare un'applicazione multi-piattaforma.
 
-- [ ] Implementa un algoritmo di apprendimento automatico profondo (deep learning) utilizzando TensorFlow.js: Sperimenta con l'implementazione di un modello di rete neurale profonda utilizzando TensorFlow.js per eseguire l'addestramento e l'inferenza direttamente nel browser.
+- [ ] 20 Implementa un algoritmo di apprendimento automatico profondo (deep learning) utilizzando TensorFlow.js: Sperimenta con l'implementazione di un modello di rete neurale profonda utilizzando TensorFlow.js per eseguire l'addestramento e l'inferenza direttamente nel browser.
 ...
