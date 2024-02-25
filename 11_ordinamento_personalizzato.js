@@ -20,5 +20,72 @@ function stamp () {
 
 function ordinamento() {
     global.ordinam = document.forms.ord.tipo.value;
-    console.log("val: " + global.ordinam);
+    switch (global.ordinam) {
+        case "alfabetico":
+            alfabetico();
+        break;
+
+        case "inverso_al":
+            inverso_al();
+        break;
+
+        case "numerico":
+            numerico();
+        break;
+
+        case "inverso_nu":
+            inverso_nu();
+        break;
+    
+        default:
+            break;
+    }
+}
+
+function alfabetico() {
+    for (let i = 0; i < global.num-1; i++) {
+        for (let j = i; j < global.num; j++) {
+            if (global.stringhe[j].charAt(0) < global.stringhe[i].charAt(0)) {
+                let scam = global.stringhe[j];
+                global.stringhe[j] = global.stringhe[i];
+                global.stringhe[i] = scam;
+            }
+        }       
+    }
+}
+
+function inverso_al() {
+    for (let i = 0; i < global.num-1; i++) {
+        for (let j = i; j < global.num; j++) {
+            if (global.stringhe[j].charAt(0) > global.stringhe[i].charAt(0)) {
+                let scam = global.stringhe[j];
+                global.stringhe[j] = global.stringhe[i];
+                global.stringhe[i] = scam;
+            }
+        }       
+    }
+}
+
+function numerico() {
+    for (let i = 0; i < global.num-1; i++) {
+        for (let j = i; j < global.num; j++) {
+            if (global.stringhe[j].length < global.stringhe[i].length) {
+                let scam = global.stringhe[j];
+                global.stringhe[j] = global.stringhe[i];
+                global.stringhe[i] = scam;
+            }
+        }       
+    }
+}
+
+function inverso_nu() {
+    for (let i = 0; i < global.num-1; i++) {
+        for (let j = i; j < global.num; j++) {
+            if (global.stringhe[j].length > global.stringhe[i].length) {
+                let scam = global.stringhe[j];
+                global.stringhe[j] = global.stringhe[i];
+                global.stringhe[i] = scam;
+            }
+        }       
+    }
 }

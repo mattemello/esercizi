@@ -27,7 +27,7 @@ ecco gli esercizi da svolgere con una checkbox di fianco
 
 - [X]  10 Implementa una funzione di memoizzazione: Scrivi una funzione JavaScript che accetti un'altra funzione come argomento e restituisca una versione "memorizzata" di essa, cioè una versione che memorizza i risultati delle chiamate precedenti per evitare di ricalcolarli quando viene chiamata con gli stessi argomenti.
 
-- [ ] 11 Implementa una funzione di ordinamento personalizzata: Scrivi una funzione che accetti un array e restituisca un nuovo array ordinato secondo un criterio personalizzato, ad esempio in base alla lunghezza delle stringhe o al valore numerico.
+- [X] 11 Implementa una funzione di ordinamento personalizzata: Scrivi una funzione che accetti un array e restituisca un nuovo array ordinato secondo un criterio personalizzato, ad esempio in base alla lunghezza delle stringhe o al valore numerico. (ottimizzabile)
 
 - [ ] 12 Risolvi il problema del commesso viaggiatore: Implementa un algoritmo che risolva il problema del commesso viaggiatore, trovando il percorso più breve per visitare tutte le città una sola volta e tornare al punto di partenza.
 
