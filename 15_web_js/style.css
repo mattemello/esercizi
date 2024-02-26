@@ -1,0 +1,35 @@
+.title{
+    margin: auto;
+    background-color: brown;
+    height: 20%;
+    min-height: 100px;
+    text-align: center;
+}
+
+.direct_Cal{
+    margin: auto;
+    background-color: palevioletred;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    position:absolute;
+    
+}
+
+.calendar{
+    margin: auto;
+    background-color: cadetblue;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    
+    
+}
+
+.todo{
+    margin: auto;
+    background-color: rebeccapurple;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
