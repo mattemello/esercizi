@@ -3,8 +3,6 @@ html, body{
 }
 .container{
     display: flex;
-    justify-content: center;
-    background-color: #f1f1f1;
     height: 90%;
 }
 
@@ -12,23 +10,22 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: brown;
     height: 10%;
     width: 100%;
+    text-align: center;
 }
 
 .direct_Cal{
-    background-color: palevioletred;
-    text-align: center;
     width: 15%;
     height: 90%;
     position: absolute;
     left: 0;
+    border: 100px;
+    text-align: left;
+    padding-left: 10px;
 }
 
 .calendar{
-    background-color: cadetblue;
-    text-align: center;
     width: 65%;
     height: 90%;
     position: absolute;
@@ -36,10 +33,9 @@ html, body{
 }
 
 .todo{
-    background-color: rebeccapurple;
-    text-align: center;
     width: 20%;
     height: 90%;
     position: absolute;
     left: 80%;
+    padding-left: 10px;
 }

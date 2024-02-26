@@ -7,21 +7,27 @@
     <title>My app</title>
 </head>
 <body>
+    <script src="index.js"></script>
     <div class="title">
-        <h2>ciao</h2> 
+        <h2>Calendar web</h2> 
     </div>
     <div class="container">
         <div class="direct_Cal">
-            <h2>ciao</h2> 
+            <h2>director</h2> 
         </div>
         <div class="calendar">
-            <h2>cia</h2>
+            <h2></h2>
         </div>
         <div class="todo">
-            <h2>ciao</h2> 
+            <h2>todo list</h2> <button type="button" popovertarget="todo_aggiunta">+</button>
         </div>
     </div>
 
-    <script src="index.js"/>
+    <div popover id="todo_aggiunta">
+        <h3>inserire i campi</h3>
+        <p>titolo <input type="text" id="titolo_todo"></p>
+        <p>descrizione <input type="text" id="descrizione_todo"></p>
+        <button type="button" onclick="aggiunta_todo()">aggiungi</button>
+    </div>
 </body>
 </html>
