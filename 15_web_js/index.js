@@ -25,8 +25,16 @@ var list = {
 function aggiunta_todo(){
     list.todo.titolo[list.todo.dim] = document.getElementById("titolo_todo").value;
     list.todo.descrizione[list.todo.dim] = document.getElementById("descrizione_todo").value;
-    
     list.todo.done[list.todo.dim] = false;
-    console.log("titolo: " + list.todo.titolo[list.todo.dim]);
+    scrittura_todo();
     list.todo.dim += 1;
+}
+
+function scrittura_todo() {
+    document.getElementById("add_todo").innerHTML += '<input type="checkbox" onclick="prova()">' + list.todo.titolo[list.todo.dim] + '</input>';
+    return;
+}
+
+function prova() {
+    console.log("ecco");
 }
