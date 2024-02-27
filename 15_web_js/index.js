@@ -31,10 +31,17 @@ function aggiunta_todo(){
 }
 
 function scrittura_todo() {
-    document.getElementById("add_todo").innerHTML += '<input type="checkbox" onclick="prova()">' + list.todo.titolo[list.todo.dim] + '</input>';
+    document.getElementById("add_todo").innerHTML += '<input type="checkbox" onclick="compleate()">' + list.todo.titolo[list.todo.dim] + '</input>';
     return;
 }
 
-function prova() {
+function compleate() {
     console.log("ecco");
+}
+
+function direct_add() {
+    list.directory.titolo[list.directory.dim] = document.getElementById("direct_titolo").value;
+    list.directory.descrizione[list.directory.dim] = document.getElementById("direct_desc").value;
+    console.log("val: " + list.directory.titolo[list.directory.dim] + " dim: " + list.directory.dim);
+    list.directory.dim += 1;
 }

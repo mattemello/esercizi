@@ -48,5 +48,9 @@ html, body{
 
 .todo_button{
     background-color: aqua;
+}
 
+.director{
+    position: absolute;
+    display: list-item;
 }

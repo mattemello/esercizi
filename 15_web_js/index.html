@@ -14,6 +14,8 @@
     <div class="container">
         <div class="direct_Cal">
             <h2>director</h2> 
+
+            <button class="director" type="button" popovertarget="direct_creation">+ aggiungi director</button>
         </div>
         <div class="calendar">
             <h2></h2>
@@ -29,6 +31,12 @@
         <p>titolo <input type="text" id="titolo_todo"></p>
         <p>descrizione <input type="text" id="descrizione_todo"></p>
         <button type="button" onclick="aggiunta_todo()">aggiungi</button>
+    </div>
+    <div popover id="direct_creation">
+        <h3>inserire i campi</h3>
+        <p>titolo <input type="text" id="direct_titolo"></p>
+        <p>descrizione <input type="text" id="direct_desc"></p>
+        <button type="button" onclick="direct_add()">aggiungi</button>
     </div>
 </body>
 </html>
