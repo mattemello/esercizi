@@ -45,3 +45,4 @@ function direct_add() {
     document.getElementById("add_direct").innerHTML += '<li>' + list.directory.titolo[list.directory.dim] + '</li>';
     list.directory.dim += 1;
 }
+
