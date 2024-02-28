@@ -42,6 +42,6 @@ function compleate() {
 function direct_add() {
     list.directory.titolo[list.directory.dim] = document.getElementById("direct_titolo").value;
     list.directory.descrizione[list.directory.dim] = document.getElementById("direct_desc").value;
-    console.log("val: " + list.directory.titolo[list.directory.dim] + " dim: " + list.directory.dim);
+    document.getElementById("add_direct").innerHTML += '<li>' + list.directory.titolo[list.directory.dim] + '</li>';
     list.directory.dim += 1;
 }
