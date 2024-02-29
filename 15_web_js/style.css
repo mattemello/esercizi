@@ -2,6 +2,12 @@ html, body{
     height: 100%;
     margin: 0px;
 }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     display:block;
     height: 90%;
@@ -82,4 +88,15 @@ html, body{
 .director{
     position: absolute;
     display: list-item;
+}
+
+.day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7%;
+    width: 40%;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
 }
