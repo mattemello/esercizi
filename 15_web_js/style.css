@@ -69,6 +69,7 @@ html, body{
     position: absolute;
     left: 15%;
     padding-left: 10px;
+    display: table;
 }
 
 .todo{
@@ -90,12 +91,20 @@ html, body{
     display: list-item;
 }
 
+.day-column{
+    float: left;
+    display: table-column;
+    width: 200px;
+    height: 200px;
+}
+
 .day{
-    display: flex;
+    display: table-row;
+    clear: both;
     justify-content: center;
     align-items: center;
-    height: 7%;
-    width: 40%;
+    height: 100px;
+    width: 100px;
     text-align: center;
     border: 1px;
     border-style: solid;
