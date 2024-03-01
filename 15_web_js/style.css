@@ -1,10 +1,6 @@
 html, body{
     height: 100%;
     margin: 0px;
-}
-
-*{
-    margin: 0;
     padding: 0;
 }
 
@@ -67,9 +63,10 @@ html, body{
     width: 18.5%;
     height: 93%;
     position: absolute;
-    left: 15%;
-    padding-left: 10px;
+    left: 15.2%;
+    padding: 0;
     display: table;
+    
 }
 
 .todo{
@@ -93,19 +90,20 @@ html, body{
 
 .day-column{
     float: left;
-    display: table-column;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    width: auto;
+    height: auto;
 }
 
 .day{
-    display: table-row;
+    display: table-cell;
     clear: both;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 100px;
+    height: 100%;
+    width: 50%;
     text-align: center;
     border: 1px;
     border-style: solid;
+    position: absolute;
 }
