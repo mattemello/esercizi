@@ -10,9 +10,8 @@ html, body{
 }
 
 .title_cal{
-    display: flex;
+    display: inline;
     justify-content: center;
-    align-items: center;
     height: 7%;
     border: 1px;
     border-bottom-style: solid;
