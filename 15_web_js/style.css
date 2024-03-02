@@ -60,7 +60,7 @@ html, body{
 }
 
 .days{
-    width: 18.5%;
+    width: 85.1%;
     height: 93%;
     position: absolute;
     left: 15.2%;
@@ -90,9 +90,9 @@ html, body{
 
 .day-column{
     float: left;
-    display: flex;
-    width: auto;
-    height: auto;
+    display: table-row;
+    width: 16.6%;
+    height: 100%;
 }
 
 .day{
@@ -100,8 +100,8 @@ html, body{
     clear: both;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 50%;
+    height: 10%;
+    width: 100%;
     text-align: center;
     border: 1px;
     border-style: solid;
