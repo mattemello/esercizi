@@ -20,20 +20,20 @@
             <div class="title_cal">
                 <header>
                     <a class="logo">pp</a>
-                    <button>today</button>
+                    <button class="button">today</button>
 
                     <nav>
-                        <div data-dir="prev">prev</div>
-                        <div data-dir="next">succ</div>
+                        <div data-dir="prev" class="button">prev</div>
+                        <div data-dir="next" class="button">succ</div>
                     </nav>
 
-                    <h2>Marzo 2024</h2>
+                    <h2 class="mese">Marzo 2024</h2>
                 </header>
             </div>
-            <div class="ore">
-                ore
-            </div>
-            <div id="calendar">.</div>
+            
+            <section class="call" data-view="${state.calendar.view}">
+                <div class="inner"></div>
+            </section>
         </div>
         <div class="todo">
             <h2>to-do list<button class="todo_button" type="button" popovertarget="todo_aggiunta">+</button></h2>

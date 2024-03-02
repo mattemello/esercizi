@@ -9,13 +9,19 @@ html, body{
     height: 90%;
 }
 
+.button, .logo, .mese{
+    margin-left: 10%;
+    float: left;
+}
+
 .title_cal{
-    display: inline;
     justify-content: center;
+    overflow: auto;
     height: 7%;
     border: 1px;
     border-bottom-style: solid;
     margin: 0px;
+    width: 100%;
 }
 
 .title{
