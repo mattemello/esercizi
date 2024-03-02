@@ -7,7 +7,6 @@
     <title>My app</title>
 </head>
 <body>
-    <script src="index.js"></script>
     <div class="title">
         <h2>Calendar web</h2> 
     </div>
@@ -18,13 +17,21 @@
             <button class="director" type="button" popovertarget="direct_creation">+ aggiungi director</button>
         </div>
         <div class="calendar">
-            <div class="title_cal">days</div>
+            <div class="title_cal">
+                <header>
+                    <a class="logo">pp</a>
+                    <button>today</button>
+
+                    <nav>
+                        <div data-dir="prev">prev</div>
+                        <div data-dir="next">succ</div>
+                    </nav>
+                </header>
+            </div>
             <div class="ore">
                 ore
             </div>
-            <div class="days" id="calendar">
-               
-            </div>
+            <div id="calendar">.</div>
         </div>
         <div class="todo">
             <h2>to-do list<button class="todo_button" type="button" popovertarget="todo_aggiunta">+</button></h2>
@@ -44,5 +51,6 @@
         <p>descrizione <input type="text" id="direct_desc"></p>
         <button type="button" onclick="direct_add()">aggiungi</button>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

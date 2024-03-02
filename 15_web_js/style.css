@@ -59,16 +59,6 @@ html, body{
     border-right-style: solid;
 }
 
-.days{
-    width: 85.1%;
-    height: 93%;
-    position: absolute;
-    left: 15.2%;
-    padding: 0;
-    display: table;
-    
-}
-
 .todo{
     width: 18.5%;
     height: 90%;
@@ -88,22 +78,12 @@ html, body{
     display: list-item;
 }
 
-.day-column{
-    float: left;
-    display: table-row;
-    width: 16.6%;
-    height: 100%;
+.days{
+display: grid;
+grid-template-columns: repeat(7, 1fr);
 }
 
-.day{
-    display: table-cell;
-    clear: both;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    width: 100%;
-    text-align: center;
-    border: 1px;
-    border-style: solid;
-    position: absolute;
+.day {
+padding: 10px;
+text-align: center;
 }
