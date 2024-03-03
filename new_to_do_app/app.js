@@ -31,12 +31,12 @@ function addTodo() {
     toDoList.title[toDoList.number] = document.getElementById("title").value;
     toDoList.description[toDoList.number] = document.getElementById("description").value;
     toDoList.done[toDoList.number] = false; 
-    let string = '<input type="checkbox" class="check" onclick="compleate()" value=' + toDoList.number + '>' +  toDoList.title[toDoList.number] + '</input> <br>';
+    let string = '<input type="checkbox" class="check" onclick="completed()" value=' + toDoList.number + '>' +  toDoList.title[toDoList.number] + '</input> <br>';
     toDoList.number += 1;
     document.getElementById("body").insertAdjacentHTML('beforeend', string);
 }
 
-function compleate() {
+function completed() {
     let num = document.querySelector(".check:checked").value;
     console.log("val: " + num);
 }
