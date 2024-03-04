@@ -1,8 +1,10 @@
 var header = `
     <header class="header"> 
-        <h2>To-Do App</h2>
-        <button class="todo_button" type="button" popovertarget="todo_aggiunta">+</button>
-        <div popover id="todo_aggiunta">
+        <div class="div_head">
+            <h2>To-Do App</h2>
+            <button class="todo_button" type="button" popovertarget="todo_aggiunta">+</button>
+        </div>
+        <div popover id="todo_aggiunta" class="popover">
         <h3>inserire i campi</h3>
             <p>titolo <input type="text" id="title"></p>
             <p>descrizione <input type="text" id="description"></p>
@@ -12,7 +14,9 @@ var header = `
 `; //header dell'html 
 
 var body = `
-    <p id="body"></p>
+    <div class="checkbox-wrapper-1">
+        <p id="body"></p>
+    </div>
 `; //body, dove andremo a stampare la nostra lista
 
 var toDoList = {        //variabile contenente la nostra lista di cose da fare
@@ -39,7 +43,7 @@ function addTodo() { // codice per l'aggiunta del ToDo
     toDoList.title[toDoList.number] = document.getElementById("title").value;
     toDoList.description[toDoList.number] = document.getElementById("description").value;
     toDoList.done[toDoList.number] = false; 
-    let string = '<div id=' + toDoList.number + '><input type="checkbox" class="check" onclick="completed()" value=' + toDoList.number + '>' +  toDoList.title[toDoList.number] + '</input> <br> </div>';
+    let string = '<div class="check_style" id=' + toDoList.number + '><input type="checkbox" class="check" onclick="completed()" value=' + toDoList.number + '><label>' +  toDoList.title[toDoList.number] + '</label> <br> </div>';
     toDoList.val[toDoList.number] = toDoList.number;
     toDoList.number += 1;
     document.getElementById("body").insertAdjacentHTML('beforeend', string);    //stampa del nuovo ToDo su schermo
