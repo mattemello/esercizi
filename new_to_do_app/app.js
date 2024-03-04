@@ -27,6 +27,11 @@ var toDoList = {        //variabile contenente la nostra lista di cose da fare
     number: 0,
 }
 
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+
 function initHeader() { //inizializzazione della pagina
     document.getElementById("app").insertAdjacentHTML('beforeend', header);
     document.getElementById("app").insertAdjacentHTML('beforeend', body);
@@ -43,7 +48,7 @@ function addTodo() { // codice per l'aggiunta del ToDo
     toDoList.title[toDoList.number] = document.getElementById("title").value;
     toDoList.description[toDoList.number] = document.getElementById("description").value;
     toDoList.done[toDoList.number] = false; 
-    let string = '<div class="check_style" id=' + toDoList.number + '><input type="checkbox" class="check" onclick="completed()" value=' + toDoList.number + '><label>' +  toDoList.title[toDoList.number] + '</label> <br> </div>';
+    let string = `<div class="check_style" id=` + toDoList.number + `><input type="checkbox" class="check" onclick="completed()" value=` + toDoList.number + `><label>` + ` <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">` +  toDoList.title[toDoList.number] + `</a></label> <br> </div>`;
     toDoList.val[toDoList.number] = toDoList.number;
     toDoList.number += 1;
     document.getElementById("body").insertAdjacentHTML('beforeend', string);    //stampa del nuovo ToDo su schermo
@@ -66,7 +71,6 @@ function completed() { //funzine per segnare che l'elemento è stato fatto
     document.getElementById(num).remove();
     removeToDo(num);
 }
-
 
 //inizio
 initHeader();
