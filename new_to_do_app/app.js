@@ -2,7 +2,6 @@ var header = `
     <header class="header"> 
         <h2>To-Do App</h2>
         <button class="todo_button" type="button" popovertarget="todo_aggiunta">+</button>
-        <button type="button" onclick="prova()">prova</button>
         <div popover id="todo_aggiunta">
         <h3>inserire i campi</h3>
             <p>titolo <input type="text" id="title"></p>
@@ -10,13 +9,13 @@ var header = `
             <button type="button" onclick="addTodo()">aggiungi</button>
         </div>
     </header>
-`;
+`; //header dell'html 
 
 var body = `
     <p id="body"></p>
-`;
+`; //body, dove andremo a stampare la nostra lista
 
-var toDoList = {
+var toDoList = {        //variabile contenente la nostra lista di cose da fare
     title: new Array(),
     description: new Array(),
     done: new Array(),
@@ -24,25 +23,31 @@ var toDoList = {
     number: 0,
 }
 
-function initHeader() {
+function initHeader() { //inizializzazione della pagina
     document.getElementById("app").insertAdjacentHTML('beforeend', header);
     document.getElementById("app").insertAdjacentHTML('beforeend', body);
 }
 
-function addTodo() {
+function addTodo() { // codice per l'aggiunta del ToDo
+
+    if (document.getElementById("title").value == '') {     //controllo che venga aggiunto almeno il titolo
+        alert("titolo non inserito, per favore inserire il titolo");
+        return;
+    }
+
+    //presa di tutti i valori necessari
     toDoList.title[toDoList.number] = document.getElementById("title").value;
     toDoList.description[toDoList.number] = document.getElementById("description").value;
     toDoList.done[toDoList.number] = false; 
     let string = '<div id=' + toDoList.number + '><input type="checkbox" class="check" onclick="completed()" value=' + toDoList.number + '>' +  toDoList.title[toDoList.number] + '</input> <br> </div>';
     toDoList.val[toDoList.number] = toDoList.number;
     toDoList.number += 1;
-    document.getElementById("body").insertAdjacentHTML('beforeend', string);
+    document.getElementById("body").insertAdjacentHTML('beforeend', string);    //stampa del nuovo ToDo su schermo
 }
 
-function removeToDo(num){
-    console.log("entro, val num " + num);
+function removeToDo(num){ //funzione di rimozione del ToDo
     for (let i = 0; i < toDoList.number; i++) {
-        if (num == toDoList.val[i]) {
+        if (num == toDoList.val[i]) {   //controllo per rimuovere l'elemento giusto della lista attraverso il valore
             toDoList.description.splice(i, 1);
             toDoList.title.splice(i, 1);
             toDoList.done.splice(i, 1);
@@ -52,23 +57,12 @@ function removeToDo(num){
     toDoList.number -= 1;
 }
 
-function completed() {
+function completed() { //funzine per segnare che l'elemento è stato fatto
     let num = document.querySelector(".check:checked").value;
     document.getElementById(num).remove();
     removeToDo(num);
-    console.log("todo array:" + toDoList.title + " descrizioni: " + toDoList.description + "done: " + toDoList.done + " num: " + toDoList.number);
 }
 
-function prova() {
-    for (let i = 0; i < 5; i++) {
-        toDoList.title[toDoList.number] = i;
-        toDoList.description[toDoList.number] = i;
-        toDoList.done[toDoList.number] = false; 
-        let string = '<div id=' + toDoList.number + '><input type="checkbox" class="check" onclick="completed()" value=' + toDoList.number + '>' +  toDoList.title[toDoList.number] + '</input> <br> </div>';
-        toDoList.val[toDoList.number] = toDoList.number;
-        toDoList.number += 1;
-        document.getElementById("body").insertAdjacentHTML('beforeend', string);        
-    }
-}
 
+//inizio
 initHeader();
