@@ -6,8 +6,8 @@ var header = `
         </div>
         <div popover id="todo_aggiunta" class="popover">
         <h3>inserire i campi</h3>
-            <p>titolo <input type="text" id="title"></p>
-            <p>descrizione <input type="text" id="description"></p>
+            <p class="inp">titolo <input type="text" id="title"></p> <br>
+            <p class="inp">descrizione <input type="text" id="description"></p><br>
             <button type="button" onclick="addTodo()">aggiungi</button>
         </div>
     </header>

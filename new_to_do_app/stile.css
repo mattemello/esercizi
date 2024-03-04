@@ -10,7 +10,11 @@ body{
     position: fixed;
     top: -60%;
     right: -60%;
-    
+    text-align: center;
+}
+
+.inp{
+    float: right;
 }
 
 .todo_button{
