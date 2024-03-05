@@ -48,7 +48,15 @@ function addTodo() { // codice per l'aggiunta del ToDo
     toDoList.title[toDoList.number] = document.getElementById("title").value;
     toDoList.description[toDoList.number] = document.getElementById("description").value;
     toDoList.done[toDoList.number] = false; 
-    let string = `<div class="check_style" id=` + toDoList.number + `><input type="checkbox" class="check" onclick="completed()" value=` + toDoList.number + `><label>` + ` <a href="#" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">` +  toDoList.title[toDoList.number] + `</a></label> <br> </div>`;
+    let string = `<div class="check_style" id=` + toDoList.number + `>
+    <input type="checkbox" class="check" onclick="completed()" value=` + toDoList.number + `>
+    <label>` + `<button class="button_txt" popovertarget="seeDesc`+ toDoList.number +`">`+ toDoList.title[toDoList.number] +`</button>
+    </label> <br> </div>
+    <div popover id="seeDesc`+ toDoList.number +`" class="popover_desc">
+        <h2>`+ toDoList.title[toDoList.number] +`</h2>
+            <p> <h3> descrizione </h3> <br> "`+ toDoList.description[toDoList.number] +`"</p><br>
+    </div>
+    `;
     toDoList.val[toDoList.number] = toDoList.number;
     toDoList.number += 1;
     document.getElementById("body").insertAdjacentHTML('beforeend', string);    //stampa del nuovo ToDo su schermo

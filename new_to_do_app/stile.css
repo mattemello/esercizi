@@ -13,8 +13,26 @@ body{
     text-align: center;
 }
 
+.button_txt{
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .inp{
     float: right;
+}
+
+.popover_desc{
+    background-color: azure;
+    border: 2px dotted black;
+    border-radius: 25px;
+    position: fixed;
+    left: -45%;
+    top: -45%;
+    width: 20%;
 }
 
 .todo_button{
