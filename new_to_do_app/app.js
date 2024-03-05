@@ -77,6 +77,7 @@ function removeToDo(num){ //funzione di rimozione del ToDo
 function completed() { //funzine per segnare che l'elemento è stato fatto
     let num = document.querySelector(".check:checked").value;
     document.getElementById(num).remove();
+    document.getElementById("seeDesc"+num).remove();
     removeToDo(num);
 }
 
