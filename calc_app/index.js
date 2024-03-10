@@ -33,7 +33,8 @@ var FUNC = {
     val: new Array,
     moltV: 0,
     divV: 0,
-    dim: 0
+    dim: 0,
+    use: false
 }
 
 /**
@@ -51,8 +52,13 @@ function initialization() {
  * @function: the function that memorize the number; 
  */
 function number(currentNum) {
+
+    if (FUNC.use == true) {
+        document.getElementById("scherm").innerHTML = "";
+        FUNC.use = false;
+    }
+
     num = num + currentNum;
-    console.log("val num: " + num);
     document.getElementById("scherm").insertAdjacentText("beforeend", currentNum);
 }
 
@@ -61,6 +67,12 @@ function number(currentNum) {
  * @param {*} currentOper: It's the operator clicked by the user 
  */
 function operator(currentOper){
+
+    if (num == "") {
+        window.alert("hai inserito subito un operatore, non si puo'!");
+        console.error("hai inserito subito un operatore, non si puo'!");
+        return;
+    }
 
     FUNC.val[FUNC.dim] = num;
     FUNC.dim++;
@@ -75,11 +87,15 @@ function operator(currentOper){
 
     num = "";
 
-    console.log("val op: " + currentOper);
     document.getElementById("scherm").insertAdjacentText("beforeend", currentOper);
 }
 
 function equal() {
+    FUNC.val[FUNC.dim] = num;
+    FUNC.dim++;
+    num = "";
+    console.log("array: " + FUNC.val);
+
     if (FUNC.moltV != 0) {
         for (let i = 1; i < FUNC.dim; i += 2) {
             if(FUNC.val[i] == '*'){
@@ -107,6 +123,13 @@ function equal() {
             i -= 2;
         }
     }
+
+    FUNC.use = true;
+    FUNC.val.splice(1, FUNC.val.length);
+    document.getElementById("scherm").innerHTML = FUNC.val[0];
+    FUNC.val.splice(0, 1);
+    FUNC.dim -= 1;
+    console.log("array: " + FUNC.dim);
 }
 
 function riposition(position) {
@@ -119,22 +142,22 @@ function riposition(position) {
 }
 
 function add(num1, num2, position) {
-    FUNC.val[position] = num1 + num2;
+    FUNC.val[position] = parseFloat(num1, 10) + parseFloat(num2, 10);
     riposition(position + 1);
 }
 
 function sub(num1, num2, position) {
-    FUNC.val[position] = num1 - num2;
+    FUNC.val[position] = parseFloat(num1, 10) - parseFloat(num2, 10);
     riposition(position + 1);
 }
 
 function molt(num1, num2, position) {
-    FUNC.val[position] = num1 * num2;
+    FUNC.val[position] = parseFloat(num1, 10) * parseFloat(num2, 10);
     riposition(position + 1);
 }
 
 function div(num1, num2, position) {
-    FUNC.val[position] = num1 / num2;
+    FUNC.val[position] = parseFloat(num1, 10) / parseFloat(num2, 10);
     riposition(position + 1);
 }
 
