@@ -83,15 +83,46 @@ function equal() {
     if (FUNC.moltV != 0) {
         for (let i = 1; i < FUNC.dim; i += 2) {
             if(FUNC.val[i] == '*'){
-                molt(FUNC.val[i-1], FUNC.val[i+1]);
+                molt(FUNC.val[i-1], FUNC.val[i+1], i-1);
                 let j = i;
                 while (j != FUNC.dim) {
                     FUNC.val[j] = FUNC.val[j + 2];
                 }
+
+                i -= 2;
             }
         }
-    }else if (FUNC.divV != 0) {
-        
+    }
+    if (FUNC.divV != 0) {
+        for (let i = 1; i < FUNC.dim; i += 2) {
+            if(FUNC.val[i] == '/'){
+                div(FUNC.val[i-1], FUNC.val[i+1], i-1);
+                let j = i;
+                while (j != FUNC.dim) {
+                    FUNC.val[j] = FUNC.val[j + 2];
+                }
+
+                i -= 2;
+            }
+        }
+    }
+
+    for (let i = 1; i < FUNC.dim; i += 2) {
+        if(FUNC.val[i] == '+'){
+            add(FUNC.val[i-1], FUNC.val[i+1]);
+            let j = i;
+            while (j != FUNC.dim) {
+                FUNC.val[j] = FUNC.val[j + 2];
+            }
+            i -= 2;
+        }else{
+            sub(FUNC.val[i-1], FUNC.val[i+1]);
+            let j = i;
+            while (j != FUNC.dim) {
+                FUNC.val[j] = FUNC.val[j + 2];
+            }
+            i -= 2;
+        }
     }
 }
 
