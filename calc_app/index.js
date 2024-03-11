@@ -67,6 +67,7 @@ function number(currentNum) {
 
 /**
  * 
+ * @function: this function take the operator and save the number in the array
  * @param {*} currentOper: It's the operator clicked by the user 
  */
 function operator(currentOper){
