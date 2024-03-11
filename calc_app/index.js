@@ -44,7 +44,7 @@ var FUNC = {
  */
 function initialization() {
     document.getElementById("app").insertAdjacentHTML('beforeend', calc);
-}
+} //initialization
 
 
 /**
@@ -63,7 +63,7 @@ function number(currentNum) {
 
     num = num + currentNum;
     document.getElementById("scherm").insertAdjacentText("beforeend", currentNum);
-}
+} //number
 
 /**
  * 
@@ -95,8 +95,13 @@ function operator(currentOper){
     num = "";
 
     document.getElementById("scherm").insertAdjacentText("beforeend", currentOper);
-}
+} //operator
 
+
+/**
+ * 
+ * @function: it's the function that do the operation and print the result.
+ */
 function equal() {
     FUNC.val[FUNC.dim] = num;
     FUNC.dim++;
@@ -135,8 +140,13 @@ function equal() {
     FUNC.val.splice(1, FUNC.val.length);
     document.getElementById("scherm").innerHTML = FUNC.val[0];
     console.log("array: " + FUNC.val);
-}
+} //equal
 
+/**
+ * 
+ * @function: slit the potizion of the array when a operation are done
+ * @param {*} position: the position of the array where the result is located
+ */
 function riposition(position) {
     let j = position;
     while (j != FUNC.dim) {
@@ -144,29 +154,62 @@ function riposition(position) {
         j++;
     }
     FUNC.dim -= 2;
-}
+} //riposition
 
+/**
+ * 
+ * @function: do the add
+ * @param {*} num1: first number
+ * @param {*} num2 : second number
+ * @param {*} position: the position were the result need to be save in the array.
+ */
 function add(num1, num2, position) {
     console.log("1: " + num1 + " 2: " + num2);
     FUNC.val[position] = parseFloat(num1, 10) + parseFloat(num2, 10);
     riposition(position + 1);
-}
+} //add
 
+/**
+ * 
+ * @function: do the sub
+ * @param {*} num1: first number
+ * @param {*} num2 : second number
+ * @param {*} position: the position were the result need to be save in the array.
+ */
 function sub(num1, num2, position) {
     FUNC.val[position] = parseFloat(num1, 10) - parseFloat(num2, 10);
     riposition(position + 1);
-}
+} //sub
 
+/**
+ * 
+ * @function: do the moltiplication
+ * @param {*} num1: first number
+ * @param {*} num2 : second number
+ * @param {*} position: the position were the result need to be save in the array.
+ */
 function molt(num1, num2, position) {
     FUNC.val[position] = parseFloat(num1, 10) * parseFloat(num2, 10);
     riposition(position + 1);
-}
+} //molt
 
+/**
+ * 
+ * @function: do the division
+ * @param {*} num1: first number
+ * @param {*} num2 : second number
+ * @param {*} position: the position were the result need to be save in the array.
+ */
 function div(num1, num2, position) {
     FUNC.val[position] = parseFloat(num1, 10) / parseFloat(num2, 10);
     riposition(position + 1);
-}
+} //div
 
+
+/**
+ * 
+ * @function: delete the last simbol, in case of the result remove the result.
+ */
 function deletLast() {
 
     if (num != "") {
@@ -196,6 +239,7 @@ function deletLast() {
     console.log("use: " + FUNC.use);
 
     document.getElementById("scherm").innerHTML = FUNC.val.join("") + "" + num;
-}
+} //deletList
 
+//initialization call
 initialization();
