@@ -54,6 +54,7 @@ function point() {
         return;
     }
 
+
     num = num + ".";
     document.getElementById("scherm").insertAdjacentText("beforeend", ".");
 }
