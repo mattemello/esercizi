@@ -23,6 +23,7 @@ var calc = `
         <button onclick="operator('*')"> x </button> <br>
 
         <button class="num" onclick="number(0)"> 0 </button>
+        <button onclick="point()"> . </button>
         <button onclick="equal()"> = </button>
         <button onclick="operator('/')"> / </button>
         <button onclick="deletLast()"> <- </button>
@@ -46,6 +47,16 @@ function initialization() {
     document.getElementById("app").insertAdjacentHTML('beforeend', calc);
 } //initialization
 
+
+function point() {
+    if (num == "") {
+        window.alert("Error: non hai inserito nessun numero");
+        return;
+    }
+
+    num = num + ".";
+    document.getElementById("scherm").insertAdjacentText("beforeend", ".");
+}
 
 /**
  * 
@@ -73,7 +84,7 @@ function number(currentNum) {
 function operator(currentOper){
 
     if (num == "" && FUNC.use == false) {
-        window.alert("hai inserito subito un operatore, non si puo'!");
+        window.alert("Error: hai inserito subito un operatore, non si puo'!");
         console.error("hai inserito subito un operatore, non si puo'!");
         return;
     }else if (FUNC.use == true) {
