@@ -30,7 +30,7 @@ var calc = `
     </div>
 `;
 
-var num = "", operatore = "";
+var num = "", dimNum = 0; operatore = "";
 var FUNC = {
     val: new Array,
     moltV: 0,
@@ -88,6 +88,12 @@ function number(currentNum) {
         FUNC.divZero = false;
     }
 
+    if (dimNum >= 15) {
+        window.alert("Error: dimensione del numero raggiunta!");
+        return;
+    }
+
+    dimNum += 1;
     num = num + currentNum;
     document.getElementById("scherm").insertAdjacentText("beforeend", currentNum);
 } //number
@@ -109,7 +115,7 @@ function operator(currentOper){
         FUNC.dim++;
     }
 
-    
+    dimNum = 0;
     FUNC.val[FUNC.dim] = currentOper;
     FUNC.dim++;
 

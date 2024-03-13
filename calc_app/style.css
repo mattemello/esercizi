@@ -37,5 +37,8 @@ button {
     border-style: solid;
     height: 50px;
     width: 525px;
+    max-width: 525px;
+    overflow: hidden; /* Nasconde il testo che supera la larghezza massima */
+    text-overflow: ellipsis;
 }
   
