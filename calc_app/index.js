@@ -36,7 +36,8 @@ var FUNC = {
     moltV: 0,
     divV: 0,
     dim: 0,
-    use: false
+    use: false,
+    divZero: false
 }
 
 /**
@@ -49,7 +50,7 @@ function initialization() {
 
 /**
  * 
- * @function: it's the function to add the poit
+ * @function: it's the function to add the poit number
  * @returns: it doesn't return anything, it's jast to abort the function
  */
 function point() {
@@ -82,6 +83,11 @@ function number(currentNum) {
         FUNC.dim -= 1;
     }
 
+    if (FUNC.divZero == true) {
+        document.getElementById("scherm").innerHTML = "";
+        FUNC.divZero = false;
+    }
+
     num = num + currentNum;
     document.getElementById("scherm").insertAdjacentText("beforeend", currentNum);
 } //number
@@ -95,7 +101,6 @@ function operator(currentOper){
 
     if (num == "" && FUNC.use == false) {
         window.alert("Error: hai inserito subito un operatore, non si puo'!");
-        console.error("hai inserito subito un operatore, non si puo'!");
         return;
     }else if (FUNC.use == true) {
         FUNC.use = false;
@@ -128,7 +133,6 @@ function equal() {
     FUNC.val[FUNC.dim] = num;
     FUNC.dim++;
     num = "";
-    console.log("array: " + FUNC.val + FUNC.dim + "");
 
     if (FUNC.moltV != 0) {
         for (let i = 1; i < FUNC.dim; i += 2) {
@@ -158,10 +162,16 @@ function equal() {
         }
     }
 
-    FUNC.use = true;
-    FUNC.val.splice(1, FUNC.val.length);
-    document.getElementById("scherm").innerHTML = FUNC.val[0];
-    console.log("array: " + FUNC.val);
+    if (FUNC.divZero === true) {
+        FUNC.val.splice(0, FUNC.val.length);
+        document.getElementById("scherm").innerHTML = "ERRORE, non puoi dividere per zero";
+        FUNC.dim -= 1;
+    }else{
+        FUNC.use = true;
+        FUNC.val.splice(1, FUNC.val.length);
+        document.getElementById("scherm").innerHTML = FUNC.val[0];
+    }
+    
 } //equal
 
 /**
@@ -186,7 +196,6 @@ function riposition(position) {
  * @param {*} position: the position were the result need to be save in the array.
  */
 function add(num1, num2, position) {
-    console.log("1: " + num1 + " 2: " + num2);
     FUNC.val[position] = parseFloat(num1, 10) + parseFloat(num2, 10);
     riposition(position + 1);
 } //add
@@ -223,6 +232,13 @@ function molt(num1, num2, position) {
  * @param {*} position: the position were the result need to be save in the array.
  */
 function div(num1, num2, position) {
+    
+    if (num2 == 0) {
+        document.getElementById("scherm").innerHTML = "Error, n/0 impossibile";
+        FUNC.val.splice(0, FUNC.val.length);
+        FUNC.divZero = true;
+        return;
+    }
     FUNC.val[position] = parseFloat(num1, 10) / parseFloat(num2, 10);
     riposition(position + 1);
 } //div
@@ -255,10 +271,6 @@ function deletLast() {
         }
 
     }
-    console.log("FUNCTION VAL: " + FUNC.val + " dim: " + FUNC.dim + " use: " + FUNC.use);
-    
-    
-    console.log("use: " + FUNC.use);
 
     document.getElementById("scherm").innerHTML = FUNC.val.join("") + "" + num;
 } //deletList
