@@ -226,7 +226,7 @@ function molt(num1, num2, position) {
 
 /**
  * 
- * @function: do the division
+ * @function: do the division and controll if you divide the number for 0
  * @param {*} num1: first number
  * @param {*} num2 : second number
  * @param {*} position: the position were the result need to be save in the array.
