@@ -47,17 +47,26 @@ function initialization() {
     document.getElementById("app").insertAdjacentHTML('beforeend', calc);
 } //initialization
 
-
+/**
+ * 
+ * @function: it's the function to add the poit
+ * @returns: it doesn't return anything, it's jast to abort the function
+ */
 function point() {
     if (num == "") {
         window.alert("Error: non hai inserito nessun numero");
         return;
     }
 
+    if (num.search(/\./) != -1) {
+        window.alert("Error: hai già inserito un punto!");
+        return;
+    }
+
 
     num = num + ".";
     document.getElementById("scherm").insertAdjacentText("beforeend", ".");
-}
+} //point
 
 /**
  * 
