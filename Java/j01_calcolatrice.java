@@ -12,12 +12,24 @@ import java.util.Scanner;
 
 public class j01_calcolatrice {
 
+    //the variable for take the number
     public static Scanner myObj = new Scanner(System.in);
 
+    /**
+     * a function to take the input
+     * @return: the input
+     */
     private static String scan(){
         return myObj.nextLine();
-    }
+    }//scan
 
+    /**
+     * the function to do the operation
+     * @param oper: the operetor
+     * @param n1: the first number
+     * @param n2: the second number
+     * @return: the result of the operation (num1 oper num2)
+     */
     private static float controllOperatore(String oper, String n1, String n2){
         
         if (n1 != null && n2 != null) {
@@ -43,7 +55,7 @@ public class j01_calcolatrice {
             } //switch
         } //if
         throw new IllegalArgumentException("Non hai scritto uno dei due valori");
-    }
+    }//controllOperatore
 
     public static void main(String[] args) {
         
@@ -72,9 +84,12 @@ public class j01_calcolatrice {
                 break;
 
             System.out.println("il risultato è: " + controllOperatore(oper, num1, num2));
+            num1 = null;
+            oper = null;
+            num2 = null;
             
         }//while
 
     }//main
     
-}
+} //class
