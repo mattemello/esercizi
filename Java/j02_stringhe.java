@@ -16,7 +16,7 @@ public class j02_stringhe {
     private static String scan(){
         Scanner myObj = new Scanner(System.in);
         return myObj.nextLine();
-    }
+    } //scan
 
     private static String initialization(){
         System.out.println("_____________________________________________");
@@ -24,7 +24,7 @@ public class j02_stringhe {
         System.out.println("_____________________________________________");
         System.out.print("> ");
         return scan();
-    }
+    } //initialization
 
     private static void subString(String line){
         String sub = null;
