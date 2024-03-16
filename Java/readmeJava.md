@@ -1,6 +1,6 @@
  [X] Calcolatrice: Crea una calcolatrice che possa eseguire operazioni di base come addizione, sottrazione, moltiplicazione e divisione. Assicurati di gestire eventuali errori di input.
 
- [ ] Gestione delle stringhe: Scrivi un programma che prenda in input una stringa e esegua operazioni come la ricerca di una sottostringa, la conversione in maiuscolo/miniscolo, il conteggio delle vocali o delle consonanti, ecc.
+ [X] Gestione delle stringhe: Scrivi un programma che prenda in input una stringa e esegua operazioni come la ricerca di una sottostringa, la conversione in maiuscolo/miniscolo, il conteggio delle vocali o delle consonanti, ecc.
 
  [ ] Gestione delle liste: Crea un programma che gestisca una lista di elementi, consentendo all'utente di aggiungere, rimuovere o cercare elementi nella lista.
 
