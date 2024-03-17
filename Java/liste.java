@@ -6,6 +6,8 @@
 
 package Java;
 
+pu
+
 public class liste{
 
 	private int elem;
