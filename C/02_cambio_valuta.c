@@ -84,9 +84,9 @@ int main(int argc, char *argv[]){
           printf("inserire la cifra di denaro: ");
           scanf("%d", &numero_da_camb);
           printf("\n inserire il tipo di valuta del numero inserito: ");
-          scanf(" %s", &valuta_da);
+          scanf(" %s", valuta_da);
           printf("\n inserire il tipo di valuta che si vuole ottenere: ");
-          scanf(" %s", &valuta_cam);
+          scanf(" %s", valuta_cam);
           printf("\n");
 
           scambioMon(numero_da_camb, valuta_cam, valuta_da);
