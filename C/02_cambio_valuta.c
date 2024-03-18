@@ -10,13 +10,13 @@
 
 void scambioMon(int num, char vCam[], char vTo[]){
      
-     float val_eu;
 
      if (vCam == vTo){
           printf("errore! hai inserito la stessa valuta!");
           return;
      }
      
+     float val_eu;
 
      if (strcmp(vTo, "$")){
           val_eu = num * 0.92;               
