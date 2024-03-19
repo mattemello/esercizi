@@ -22,12 +22,25 @@ void scambioMon(int num, char vCam[], char vTo[]){
           val_eu = num * 0.92;               
      }else if (strcmp(vTo, "£")){
           val_eu = num * 1.17;
-     }
-     else
-     {
-          /* code */
+     }else if (strcmp(vTo, "€")){
+          val_eu = num;
+     }else if (strcmp(vTo, "¥")){
+          val_eu = num * 0.0062;
+     }else{
+          printf("Error! tipo di valuta non valida!");
      }
      
+     if (strcmp(vCam, "$")){
+          printf("Il valore dei soldi in dollari è: %.2lf", (val_eu * 1.09));               
+     }else if (strcmp(vCam, "£")){
+          printf("Il valore dei soldi in sterline è: %.2lf", (val_eu * 0.86));    
+     }else if (strcmp(vCam, "€")){
+          printf("Il valore dei soldi in euro è: %.2lf", val_eu);    
+     }else if (strcmp(vCam, "¥")){
+          printf("Il valore dei soldi in yen è: %.2lf", (val_eu * 163.11));    
+     }else{
+          printf("Error! tipo di valuta non valida!");
+     }
 
      /*switch(vTo){
           case '¥$':
@@ -38,11 +51,11 @@ void scambioMon(int num, char vCam[], char vTo[]){
                val_eu = num * 1.17;
           break;
 
-          case '€':
+          case '':
                val_eu = num;
           break;
 
-          case '¥':
+          case '':
                val_eu = num * 0.0062;
           break;
 
@@ -83,11 +96,16 @@ int main(int argc, char *argv[]){
      while (1) {
           printf("inserire la cifra di denaro: ");
           scanf("%d", &numero_da_camb);
-          printf("\n inserire il tipo di valuta del numero inserito: ");
+          printf("\n inserire il tipo di valuta del numero inserito: (per uscire premere q)");
           scanf(" %s", valuta_da);
-          printf("\n inserire il tipo di valuta che si vuole ottenere: ");
+          printf("\n inserire il tipo di valuta che si vuole ottenere: (per uscire premere q)");
           scanf(" %s", valuta_cam);
           printf("\n");
+
+          if (valuta_cam[0] == 'q' || valuta_da[0] == 'q'){
+               break;
+          }
+          
 
           scambioMon(numero_da_camb, valuta_cam, valuta_da);
      }
