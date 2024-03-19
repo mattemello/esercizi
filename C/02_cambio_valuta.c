@@ -41,6 +41,7 @@ void scambioMon(int num, char vCam[], char vTo[]){
      }else{
           printf("Error! tipo di valuta non valida!");
      }
+     printf("\n");
 
      /*switch(vTo){
           case '¥$':
@@ -90,15 +91,15 @@ void scambioMon(int num, char vCam[], char vTo[]){
 
 int main(int argc, char *argv[]){
 
-   int numero_da_camb;
+   float numero_da_camb;
    char valuta_cam[2], valuta_da[2];
 
      while (1) {
           printf("inserire la cifra di denaro: ");
-          scanf("%d", &numero_da_camb);
-          printf("\n inserire il tipo di valuta del numero inserito: (per uscire premere q)");
+          scanf("%f", &numero_da_camb);
+          printf("\n inserire il tipo di valuta del numero inserito: (per uscire premere q) ");
           scanf(" %s", valuta_da);
-          printf("\n inserire il tipo di valuta che si vuole ottenere: (per uscire premere q)");
+          printf("\n inserire il tipo di valuta che si vuole ottenere: (per uscire premere q) ");
           scanf(" %s", valuta_cam);
           printf("\n");
 
