@@ -1,4 +1,4 @@
-[ ] Calcolatrice Semplice: Scrivi un programma che chieda all'utente di inserire due numeri e poi esegua operazioni aritmetiche come l'addizione, la sottrazione, la moltiplicazione e la divisione su quei numeri.
+[X] Calcolatrice Semplice: Scrivi un programma che chieda all'utente di inserire due numeri e poi esegua operazioni aritmetiche come l'addizione, la sottrazione, la moltiplicazione e la divisione su quei numeri.
 
 [ ] Convertitore di Valuta: Crea un programma che converte una somma di denaro da una valuta all'altra, utilizzando un tasso di cambio prestabilito.
 
