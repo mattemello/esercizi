@@ -4,12 +4,36 @@
 #include "librery.h"
 
 char** line;
+int ran_num;
 
 void takeLine(){
     
 }
 
-void firstLevel(){}
+void randomNum(){
+    ran_num = random();
+}
+
+void firstLevel(){
+    int i = 0, numError;
+    randomNum();
+    while (1){
+        if (line[ran_num][i] == "/n"){
+            break;
+        }
+        
+        char letter;
+        printf(line[ran_num][i]);
+        scanf(" %c", letter);
+        if (letter != line[ran_num][i]){
+            numError++;
+        }
+        i++;
+    }
+
+    printf(/*inserire*/"");
+    
+}
 
 void secondLevel(){}
 
