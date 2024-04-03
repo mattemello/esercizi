@@ -12,12 +12,16 @@ function initSelect() {
     document.getElementById("app").insertAdjacentHTML('beforeend', select);
 }
 
+function levelOne(){
+    
+}
+
 function selected() {
     levelSelected = document.querySelector('input[name="level"]:checked').value;
     switch (levelSelected) {
       case "1":
         console.log("primo preso");
-
+        levelOne();
         break;
 
       case "2":
