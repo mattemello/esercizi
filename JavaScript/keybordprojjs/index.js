@@ -15,13 +15,19 @@ function initSelect() {
 function selected() {
     levelSelected = document.querySelector('input[name="level"]:checked').value;
     switch (levelSelected) {
-        case "1":
-            console.log("primo preso");
-            
-            break;
-    
-        default:
-            break;
+      case "1":
+        console.log("primo preso");
+
+        break;
+
+      case "2":
+        break;
+
+      case "3":
+        break;
+
+      default:
+        break;
     }
 }
 
