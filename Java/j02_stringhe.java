@@ -1,8 +1,8 @@
 /**
- * 
+ *
  * j02_stringhe
  * @author: Massimello Matteo
- * Gestione delle stringhe: Scrivi un programma che prenda in input una stringa 
+ * Gestione delle stringhe: Scrivi un programma che prenda in input una stringa
  * e esegua operazioni come la ricerca di una sottostringa, la conversione in maiuscolo/miniscolo, il conteggio delle vocali o delle consonanti, ecc.
  */
 
@@ -111,7 +111,7 @@ public class j02_stringhe {
         line = initialization();
 
         while (true) {
-            
+
             System.out.println("_____________________________________________");
             System.out.println("Inserire il numero dell'operazione: ");
             System.out.println("---------------------------------------------");
@@ -154,7 +154,7 @@ public class j02_stringhe {
 
                 case "q":
                     return;
-            
+
                 default:
                     System.out.println("Error! -  valore inserito non valido");
                     System.out.print("\033[H\033[2J");

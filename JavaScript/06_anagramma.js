@@ -1,5 +1,5 @@
-/**Controlla se una parola è un'anagramma di un'altra: 
- * Scrivi uno script che verifichi se due parole sono anagrammi l'una dell'altra. 
+/**Controlla se una parola è un'anagramma di un'altra:
+ * Scrivi uno script che verifichi se due parole sono anagrammi l'una dell'altra.
  * Due parole sono anagrammi se hanno le stesse lettere disposte in modo diverso. */
 
 function control(word1, word2) {
